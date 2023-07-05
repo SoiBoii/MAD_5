@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Student</title>
+</head>
+<body>
+    <h1>Add a Student</h1>
+    <form action="{{ url_for('create_student') }}" method="post">
+       <div><br><label for="roll">Roll Number:</label>
+        <input type="text" id="roll" name="roll" required><br></div>
+        <div><br><label for="f_name">First Name:</label>
+        <input type="text" id="f_name" name="f_name" required><br></div>
+        <div><br><label for="l_name">Last Name:</label>
+        <input type="text" id="l_name" name="l_name"><br></div>
+        <div><br>
+            <label>Select Courses: </label>
+            <input type="checkbox" name="courses" value="1" />
+            <label>MAD I</label>
+            <input type="checkbox" name="courses" value="2" />
+            <label>DBMS</label>
+            <input type="checkbox" name="courses" value="3" />
+            <label>PDSA</label>
+            <input type="checkbox" name="courses" value="4" />
+            <label>BDM</label>
+            </div><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
