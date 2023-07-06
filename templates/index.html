@@ -11,7 +11,7 @@
         <p> <a href="{{ url_for('create_student') }}">+Add Student</a></p>
         {% else %}
         <h2>Students:</h2>
-        <table>
+        <table id = "all-students">
             <tr>
                 <td><b>SNo</b></td>
                 <td><b>Roll no</b></td>
@@ -26,8 +26,8 @@
                 <td>{{ student.first_name }}</td> 
                 <td>{{ student.last_name }}</td> 
 
-                <td><a href="{{ url_for('update_student', student_id=student.student_id) }}">Update</a>
-                    <a href="{{ url_for('delete_student', student_id=student.student_id) }}">Delete</a>
+                <td><a href="{{ url_for('update_student', student_id=student.student_id) }}" type="button">Update</a>
+                    <a href="{{ url_for('delete_student', student_id=student.student_id) }}" type="button">Delete</a>
                 </td>
             </tr>
             {% endfor %}
